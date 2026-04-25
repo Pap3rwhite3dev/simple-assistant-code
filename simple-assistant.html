@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assistant Trigger</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #output {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Type a command:</h2>
+  <input type="text" id="inputBox" placeholder="Type here..." />
+  <div id="output"></div>
+
+  <script>
+    const inputBox = document.getElementById("inputBox");
+    const output = document.getElementById("output");
+
+    inputBox.addEventListener("input", function () {
+      if (inputBox.value.trim() === "/assistant") {
+        output.textContent = "I am your assistant, how can I help you?";
+      } else {
+        output.textContent = "";
+      }
+    });
+  </script>
+
+</body>
+</html>
